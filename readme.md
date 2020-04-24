@@ -1,4 +1,6 @@
-# pretty-ms [![Build Status](https://travis-ci.org/sindresorhus/pretty-ms.svg?branch=master)](https://travis-ci.org/sindresorhus/pretty-ms)
+> NOTE: Fork of [pretty-ms](https://github.com/sindresorhus/pretty-ms) with support for Node 8
+
+# pretty-ms
 
 > Convert milliseconds to a human readable string: `1337000000` → `15d 11h 23m 20s`
 
@@ -11,7 +13,7 @@ $ npm install pretty-ms
 ## Usage
 
 ```js
-const prettyMilliseconds = require('pretty-ms');
+const prettyMilliseconds = require("pretty-ms");
 
 prettyMilliseconds(1337000000);
 //=> '15d 11h 23m 20s'
@@ -23,23 +25,23 @@ prettyMilliseconds(133);
 //=> '133ms'
 
 // `compact` option
-prettyMilliseconds(1337, {compact: true});
+prettyMilliseconds(1337, { compact: true });
 //=> '1s'
 
 // `verbose` option
-prettyMilliseconds(1335669000, {verbose: true});
+prettyMilliseconds(1335669000, { verbose: true });
 //=> '15 days 11 hours 1 minute 9 seconds'
 
 // `colonNotation` option
-prettyMilliseconds(95500, {colonNotation: true});
+prettyMilliseconds(95500, { colonNotation: true });
 //=> '1:35.5'
 
 // `formatSubMilliseconds` option
-prettyMilliseconds(100.400080, {formatSubMilliseconds: true})
+prettyMilliseconds(100.40008, { formatSubMilliseconds: true });
 //=> '100ms 400µs 80ns'
 
 // Can be useful for time durations
-prettyMilliseconds(new Date(2014, 0, 1, 10, 40) - new Date(2014, 0, 1, 10, 5))
+prettyMilliseconds(new Date(2014, 0, 1, 10, 40) - new Date(2014, 0, 1, 10, 5));
 //=> '35m'
 ```
 
@@ -129,6 +131,7 @@ Display time using colon notation: `5h 1m 45s` → `5:01:45`. Always shows time 
 Useful when you want to display time without the time units, similar to a digital watch.
 
 Setting `colonNotation` to `true` overrides the following options to `false`:
+
 - `compact`
 - `formatSubMilliseconds`
 - `separateMilliseconds`
